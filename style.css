@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Poppins:wght@100;400;500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 500;
+  max-width: 35vh;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+span {
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+}
+
+.container {
+  margin: 2% 7%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(6, 1fr); */
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header "
+    "card card "
+    "Project Project "
+    "team team "
+    "clients clients "
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+/* navbar */
+
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav .nav-logo {
+  font-size: 36px;
+  font-family: 'Heebo', sans-serif;
+
+}
+
+.nav-link {
+  font-size: 18px;
+  margin: 0 20px;
+  font-weight: 500;
+}
+
+span.opn-Nav {
+  display: none;
+}
+
+/* main-page */
+
+.header img {
+  width: 100%;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.header p,
+.header form {
+  margin: 0 20% 30px;
+  max-width: 35vh;
+
+}
+
+.header h1 {
+  font-size: 48px;
+  margin: 0 20% 30px;
+  max-width: 40vh;
+  font-weight: 500;
+
+}
+
+h1.header-title {
+  max-width: 50vh;
+}
+
+.header p:first-child {
+  color: #2D9CDB;
+}
+
+form span {
+  font-size: 14px;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: #f2f2f2;
+  padding-left: 30px;
+}
+
+button.btn-title {
+  padding: 10px 25px;
+  background-color: #2D9CDB;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  bottom: 37px;
+  left: 220px;
+  cursor: pointer;
+
+}
+
+/* card */
+
+.card {
+  grid-area: card;
+  margin: 50px 10%;
+}
+
+.team {
+  grid-area: team;
+}
+
+.card-content {
+  display: flex;
+}
+
+.ui,
+.front,
+.back {
+  width: 340px;
+  height: 422px;
+  background-color: #fff;
+  margin-right: 50px;
+  border-radius: 12px;
+  transition: 0.4s ease-in-out;
+
+}
+
+.ui:hover,
+.front:hover,
+.back:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+.card-items {
+  margin: 30px;
+}
+
+.ui i {
+  padding: 20px;
+  background: #2D9CDB;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.front i {
+  padding: 20px;
+  background: #27AE60;
+  border-radius: 12px;
+  color: #fff;
+
+}
+
+.back i {
+  padding: 20px;
+  background: #EB5757;
+  border-radius: 12px;
+  color: #fff;
+
+}
+
+.card h3 {
+  color: #252525;
+  margin: 10% 0;
+}
+
+.card-item p {
+  line-height: 24px;
+  color: #4f4f4f;
+}
+
+button.btn-card {
+  padding: 12px 20px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 12px;
+  color: #4f4f4f;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+button.btn-card:hover {
+  background-color: #2D9CDB;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Project */
+
+.Project {
+  margin: 50px 10%;
+  grid-area: Project;
+  display: grid;
+  grid-template-columns: repeat(2, 1.5fr);
+  gap: 20px 30px;
+  grid-template-areas:
+    "pTitle pTitle"
+    "a b"
+    "c d";
+}
+
+.project-content img {
+  border-radius: 30px;
+  width: 100%;
+}
+
+.project-content p {
+  font-size: 14px;
+  line-height: 27px;
+  color: #bdbdbd;
+}
+
+.project-content h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.pTitle {
+  display: 100%;
+  grid-area: pTitle;
+}
+
+.a {
+  grid-area: a;
+}
+
+.b {
+  grid-area: b;
+}
+
+.c {
+  grid-area: c;
+}
+
+.d {
+  grid-area: d;
+}
+
+.a,
+.c {
+  margin-top: 300px
+}
+
+p.more {
+  position: relative;
+  justify-content: end;
+  text-align: end;
+  width: 200%;
+  font-size: 18px;
+  color: #2D9CDB;
+  cursor: pointer;
+  bottom: 45px;
+}
+
+/* Team */
+
+.team {
+  grid-area: team;
+  display: flex;
+  margin: 50px 10%
+}
+
+.team img {
+  border-radius: 12px;
+  margin: 10px;
+}
+
+img.img-a {
+  float: left;
+  margin: 100px 0
+}
+
+.tContent {
+  padding-right: 20vh;
+  margin-top: 15%;
+}
+
+.tContent p {
+  font-size: 18px;
+  color: #EB5757;
+}
+
+.tContent h3 {
+  font-size: 36px;
+  font-weight: 500;
+  width: 300px;
+}
+
+.tContent span {
+  font-size: 16px;
+}
+
+/* client */
+
+.clients {
+  grid-area: clients;
+  margin: 50px 10%;
+}
+
+.clients h3 {
+  font-size: 36px;
+  width: 70%;
+}
+
+.client {
+  display: flex;
+  margin: 20px 0;
+}
+
+.client img {
+  width: 10%;
+  border-radius: 12px;
+  margin-right: 20px;
+}
+
+p.c-name {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+p.c-job {
+  font-size: 16px;
+  color: #828282;
+}
+
+/* footer */
+
+.footer {
+  grid-area: footer;
+  background-color: #100E1D;
+
+}
+
+.f-item {
+  display: flex;
+  margin: 0 15%;
+  padding: 50px 0;
+  justify-content: space-between
+}
+
+.f-item p,
+.f-item a,
+.f-item button {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.f-nav {
+  line-height: 27px;
+}
+
+.f-contact a {
+  font-size: 24px;
+  font-family: 'Heebo', sans-serif;
+}
+
+.f-contact img {
+  margin: 10px 10px 0 0;
+}
+
+.f-input p {
+  font-size: 12px;
+}
+
+button.f-butt {
+  position: relative;
+  right: 83px;
+  border-radius: 10px;
+  padding: 10px 25px;
+  border: none;
+  background-color: #2D9CDB;
+  cursor: pointer;
+}
+
+.cc {
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0;
+
+}
+
+.cc a,
+.cc p {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 12px;
+
+}
+
+@media screen and (max-width : 1440px) {
+  .team img {
+    width: 200px;
+  }
+
+  .card-items {
+    margin: 20px;
+  }
+
+  .clients h3 {
+    width: 90%;
+    font-size: 32px;
+  }
+
+
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    margin: 10px
+  }
+
+  .header {
+    margin: 5px 5px
+  }
+
+  nav .nav-logo {
+    font-size: 24px;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  span.opn-Nav {
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .header h1,
+  h1 {
+    font-size: 24px;
+    margin: 2px 50px;
+
+  }
+
+  .header p,
+  .header form {
+    font-size: 12px;
+    margin: 0 50px;
+    line-height: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .card-content {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .ui,
+  .front,
+  .back {
+    margin: 20px 0;
+    width: 300px;
+  }
+
+  .Project {
+    margin: 10px;
+    grid-area: Project;
+    display: grid;
+    grid-template-columns: repeat(1, 400px);
+    gap: 50px 30px;
+    grid-template-areas:
+      "pTitle"
+      "a"
+      "b"
+      "c"
+      "d";
+  }
+
+  .project-content img {
+    width: 350px;
+    border-radius: 20px;
+  }
+
+  .a,
+  .c {
+    margin-top: 0;
+  }
+
+  .project-content p {
+    font-size: 12px;
+  }
+
+  .project-content h3 {
+    font-size: 18px;
+  }
+
+  p.more {
+    width: 50%;
+    justify-content: first baseline;
+    text-align: start;
+    bottom: 0;
+  }
+
+  .team {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .team img {
+    width: 45%;
+  }
+
+  .tContent span {
+    font-size: 12px;
+  }
+
+  .tImg {
+    margin-top: 40px;
+  }
+
+  .clients {
+    margin: 20px 10px;
+  }
+
+  .clients h3 {
+    font-size: 24px;
+    width: 100%;
+    font-weight: 500;
+  }
+
+  .client img {
+    width: 100px;
+  }
+
+  .f-item {
+    flex-direction: column;
+    margin: 50px;
+  }
+
+  .f-nav,
+  .f-contact {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width:450px) {
+  input[name='f-email'] {
+    width: 300px;
+
+  }
+
+  button.f-butt {
+    bottom: 38px;
+    left: 220px;
+  }
+}
+
+@media screen and (max-width:375px) {
+
+  .header h1,
+  h1 {
+    font-size: 24px;
+    margin: 2px 20px;
+
+  }
+
+  .header p,
+  .header form {
+    font-size: 12px;
+    margin: 0 20px;
+    line-height: 30px;
+  }
+
+  .card {
+    margin: 0 20px;
+  }
+
+  .project-content img {
+    width: 320px;
+  }
+
+  .f-item {
+    margin: 0 20px;
+  }
+
+}
